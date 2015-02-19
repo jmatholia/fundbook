@@ -1,5 +1,58 @@
+#main {
+	width:  900px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+#searchtext {
+	width: 100px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+#searchInput {
+	font-size: 16px;
+	margin: 5px 5px 5px 5px;
+	border-radius: 6px;
+}
+
 #topbar {
-	font-family: "Courier New Bold", Arial, Sans-Serif;
+	font-family: Palatino Linotype;
 	color: #0066FF;
 	font-weight: bolder;
+	background-image: url(http://www.shaneingles.com/imgs/graphicdesignimage.png);
+}
+
+#frozen {
+	height: 100px;
+	background-color: black;
+	opacity: 0.8;
+}
+
+#search {
+	width: 100%;
+	margin: 5px 5px 5px 5px;
+	float: left;
+	border-radius: 6px;
+}
+
+#buttons {
+	padding-top: 100px;
+	clear:right;
+}
+
+.top {
+	width: 100px;
+	margin: 5px 5px 5px 5px;
+	margin-top: 25px;
+	float: right;
+	font-family: "Courier New Bold", Arial, Sans-Serif;
+}
+
+.bottom {
+	height: 40px;
+	width: 100px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+	font-family: "Courier New Bold", Arial, Sans-Serif;
 }
