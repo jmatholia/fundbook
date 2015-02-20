@@ -4,21 +4,41 @@
 	<head> 
 		<link rel="stylesheet" href="css/bootstrap.min.css"> </style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"> </style>
-		<script type="text/javascript" src="thejavascript.js"></script>
+		<script type="text/javascript" src="mouse_events.js"></script>
 	</head>
 	<body>
 		<div id="topbar"> 
-			<h1> <font color=#00FFCC>Fund</font>Book </h1>
-			<h3 id="search" onclick="haha();"> Search: </h2> 
-			<HR color=#6699FF size="6">
+			<div id="frozen">
+				<h1 id="main"> <font color=#00FFCC>Fund</font>Book </h1>
+				<a href="login-form/23-dark-login-form/index.html" id="signin" class="top"> Sign In </a>
+				<a href="signup-form/23-dark-login-form/index.html" id="signup" class="top"> Sign Up </a>
+				<!-- Search Bar -->
+				<div id="search">
+					<h3 id="searchtext" onclick="haha();"> Search: </h3>
+					<!--<form action="demo_form.asp">
+					  First name: <input type="text" name="fname"><br>
+					  Last name: <input type="text" name="lname"><br> -->
+					<input type="text" placeholder="Search for a Project" id="searchInput"> </input>
+				</div>
+				<!-- </form> -->
+			</div>
 			<!-- Buttons for "TOPIC" links -->
-			<center>
-			<button type="button" class="btn btn-primary btn-lg">Art</button>
-			<button type="button" class="btn btn-success btn-lg">Comics</button>
-			<button type="button" class="btn btn-info btn-lg">Fashion</button>
-			<button type="button" class="btn btn-warning btn-lg">Technology</button>
-			<button type="button" class="btn btn-danger btn-lg">Music</button>
-			</center>
+			<div id="buttons"> 
+				<center>
+				<button type="button" class="btn btn-primary btn-lg">Art</button>
+				<button type="button" class="btn btn-success btn-lg">Comics</button>
+				<button type="button" class="btn btn-info btn-lg">Fashion</button>
+				<button type="button" class="btn btn-warning btn-lg">Technology</button>
+				<button type="button" class="btn btn-danger btn-lg">Music</button>
+				</center>
+			</div>
+		</div>
+
+		<div>
+			<hr color=#6699FF size="6"> 
+			<a href="about.html" id="about" class="bottom"> About Us </a>
+			<a href="tutorial.html" id="tutorial" class="bottom"> Tutorial </a>
+			<a href="help.html" id="help" class="bottom"> Help </a>
 		</div>
 	</body>
 </html>
