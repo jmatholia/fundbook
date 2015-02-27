@@ -1,0 +1,28 @@
+amazon aws website Gina's Login info:
+e-mail: gina.xiee@gmail.com
+pword: fundbook
+
+
+
+
+
+- to ssh into our aws server type this into cygwin/putty:
+** NOTE: you will have to be in the directory where the key is located! **
+
+ssh -i fundbook_keypair.pem ubuntu@52.11.64.163
+
+
+
+
+
+- to log into mysql type this into cygwin/putty:
+mysql -u root -p
+.. then it will prompt you for the password (below)
+
+MYSQL INFO:
+user = root
+password = fundbook
+
+
+
+
