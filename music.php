@@ -2,9 +2,8 @@
 
 		<!-- TOP PROJECTS INFO-->
 		<center>
-		<h1 id="topic_heading"> Top Projects in <font color=#c12e2a>Music</font> </h1>
+		<h1 id="topic_heading"> Top Projects in <font color=#265a88>Music</font> </h1>
 		</center>
-
 		<!-- 3 Project Previews-->
 		<center>
 		<hr color=#6699FF size="6"> 
