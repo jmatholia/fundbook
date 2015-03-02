@@ -2,7 +2,7 @@
 
 		<!-- TOP PROJECTS INFO-->
 		<center>
-		<h1 id="topic_heading"> Top Projects in <font color=#419641>Comics</font></h1>
+		<h1 id="topic_heading"> Top Projects in <font color=#eb9316>Comics</font></h1>
 		</center>
 
 		<!-- 3 Project Previews-->

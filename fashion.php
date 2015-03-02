@@ -2,7 +2,7 @@
 
 		<!-- TOP PROJECTS INFO-->
 		<center>
-		<h1 id="topic_heading"> Top Projects in <font color=#2aabd2>Fashion</font> </h1>
+		<h1 id="topic_heading"> Top Projects in <font color=#419641>Fashion</font></h1>
 		</center>
 		
 		<!-- 3 Project Previews-->

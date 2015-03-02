@@ -1,10 +1,10 @@
 <?php include("headers.html"); ?>
-
+	
 		<!-- TOP PROJECTS INFO-->
 		<center>
-		<h1 id="topic_heading"> Top Projects in <font color=#eb9316>Technology</font></h1>
+		<h1 id="topic_heading"> Top Projects in <font color=#2aabd2>Technology</font> </h1>
 		</center>
-		
+
 		<!-- 3 Project Previews-->
 		<center>
 		<hr color=#6699FF size="6"> 
