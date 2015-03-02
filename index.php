@@ -2,7 +2,7 @@
 
 		<!-- 3 Project Previews-->
 		<center>
-		<hr color=#6699FF size="6"> 
+		<hr color="#6699FF" size="6"> 
 		<div class="row">
 		<center>
 		  <div class="col-sm-6 col-md-4">
@@ -38,5 +38,18 @@
 		</center>
 		</div>
 		</center>
+<?php	
+	$db = mysql_iconnect("hostname=52.11.64.163:22;dbname=fundbook;", "root", "fundbook");
+	if (! $db) {
+		die("Could not conect to ", . mysql_error());
+	}
+	// $rows = $db->query("SELECT email FROM users WHERE name='Jahnavi'");
+	// print $rows;
+	echo 'Connected successfully';
+	mysql_close($db);
+
+?>
 
 <?php include("footers.html"); ?>
+
+

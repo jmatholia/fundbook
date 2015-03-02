@@ -9,8 +9,7 @@ pword: fundbook
 - to ssh into our aws server type this into cygwin/putty:
 ** NOTE: you will have to be in the directory where the key is located! **
 
-ssh -i fundbook_keypair.pem ubuntu@52.11.64.163
-
+ssh -t -t -i fundbook_keypair.pem ubuntu@52.11.64.163
 
 
 
