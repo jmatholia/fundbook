@@ -38,16 +38,21 @@
 		</center>
 		</div>
 		</center>
-<?php	
-	$db = mysql_iconnect("hostname=52.11.64.163:22;dbname=fundbook;", "root", "fundbook");
+<?php
+	$dsn = "mysql:host=localhost;dbname=fundbook";
+	//$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+	$db = new PDO($dsn, "root", "fundbook");
+	//$db = new PDO("mysql:host=52.11.64.163:22;dbname=fundbook;", "root", "fundbook");
 	if (! $db) {
-		die("Could not conect to ", . mysql_error());
+		echo "Could not connect to database!";
+		// die("Could not conect to ", . mysql_error());
+	} else {
+		print "Database connected :) ";
 	}
-	// $rows = $db->query("SELECT email FROM users WHERE name='Jahnavi'");
-	// print $rows;
-	echo 'Connected successfully';
-	mysql_close($db);
-
+	$rows = $db->query("SELECT email FROM users WHERE name='Jahnavi'");
+	foreach ($rows as $row) {
+		print $row["email"];
+	}
 ?>
 
 <?php include("footers.html"); ?>
