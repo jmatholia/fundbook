@@ -1,34 +1,33 @@
 Schema:
 
-users	email**	password	admin	name 	
-	String	String		Bool	String	
+users	email**		password	admin			name 	
+	VARCHAR(50)	VARCHAR(20)	VARCHAR(1) (T/F)	VARCHAR(50)
 
-project	pid**	decription	goal	interest		location	   		creation			completion
-	String	String		Double	References topics.tid	References location.lid		TIMESTAMP (For Admin Purposes)	TIMESTAMP (For Admin Purposes)
 
-topic	tid**	name
-	String	String
+projects	pid**	Name		goal	topic		location	   		creation			completion
+		Int	VARCHAR(50)	Double	VARCHAR(30)	References location.lid		DATETIME (For Admin Purposes)	DATETIME YYYY-MM-DD HH:MM:SS (For Admin Purposes)
 
-location	lid**	city	country
-		String	String	String
 
-milestone	pid**	mNum**	description
-		String	Int	String
+locations	lid**	city		country
+		Int	VARCHAR(30);	VARCHAR(30);
 
-funded	pid**	userid**	time**				amount
-	String	String		TIMESTAMP (For Admin Purposes)	Double
+milestones	pid**			mNum**	description
+		References projects.pid	Int	VARCHAR(150);
 
-userRating	rated**			rating			rater**
-		References user.email	Int (1 or -1)		References user.email
+funded	pid**				userid**		time**							amount
+	References projects.pid 	Ref users.email		DATETIME YYYY-MM-DD HH:MM:SS (For Admin Purposes)	Double
 
-projectImpact	project**		rating			rater**
-		References project.pid	Int (1 or -1)		References user.email
+userRatings	rated**			rating			rater**
+		References user.email	SMALLINT (1 or -1)	References user.email
 
-locationInterests	person**		interestedLocation**
+projectRatings	pid**			rating			rater**
+		References project.pid	SMALLINT (1 or -1)	References user.email
+
+locationInterests	person**		location**
 			References user.email	References location.lid
 
-topicIntrests	person**		interstedTopic**
-		References user.email	References topic.tid
+topicInterests	person**		topic**
+		References user.email	References projects.interest
 
 Notes: 
 ** means it’s a primary key. 
