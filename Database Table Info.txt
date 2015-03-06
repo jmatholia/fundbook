@@ -3,8 +3,8 @@ Schema:
 users	email**	password	admin	name 	
 	String	String		Bool	String	
 
-project	pid**	decription	goal	interest		location	   		creation		completion
-	String	String		Int	References topics.tid	References location.lid		For Admin Purposes	For Admin Purposes
+project	pid**	decription	goal	interest		location	   		creation			completion
+	String	String		Double	References topics.tid	References location.lid		TIMESTAMP (For Admin Purposes)	TIMESTAMP (For Admin Purposes)
 
 topic	tid**	name
 	String	String
@@ -15,14 +15,14 @@ location	lid**	city	country
 milestone	pid**	mNum**	description
 		String	Int	String
 
-funded	pid**	userid**	time**			amount
-	String	String		For Admin Purposes	Int 
+funded	pid**	userid**	time**				amount
+	String	String		TIMESTAMP (For Admin Purposes)	Double
 
-userRating	rated**			rating		rater**
-		References user.email	Int		References user.email
+userRating	rated**			rating			rater**
+		References user.email	Int (1 or -1)		References user.email
 
-projectImpact	project**	rating			rater**
-		References 	project.pid		String	References user.email
+projectImpact	project**		rating			rater**
+		References project.pid	Int (1 or -1)		References user.email
 
 locationInterests	person**		interestedLocation**
 			References user.email	References location.lid
