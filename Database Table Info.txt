@@ -1,0 +1,37 @@
+Schema:
+
+users	email**	password	admin	name 	
+	String	String		Bool	String	
+
+project	pid**	decription	goal	interest		location	   		creation		completion
+	String	String		Int	References topics.tid	References location.lid		For Admin Purposes	For Admin Purposes
+
+topic	tid**	name
+	String	String
+
+location	lid**	city	country
+		String	String	String
+
+milestone	pid**	mNum**	description
+		String	Int	String
+
+funded	pid**	userid**	time**			amount
+	String	String		For Admin Purposes	Int 
+
+userRating	rated**			rating		rater**
+		References user.email	Int		References user.email
+
+projectImpact	project**	rating			rater**
+		References 	project.pid		String	References user.email
+
+locationInterests	person**		interestedLocation**
+			References user.email	References location.lid
+
+topicIntrests	person**		interstedTopic**
+		References user.email	References topic.tid
+
+Notes: 
+** means it’s a primary key. 
+Need times for admin purposes: most recent funds, how long it takes for project to be completely funded, frequency of donations etc.
+A user can only rate another user once
+A project can only be tagged with a single interest and location
