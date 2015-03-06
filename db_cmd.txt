@@ -4,10 +4,10 @@ use fundbook;
 create table [table name] ([attr name] [type], ..., primary key ([attr name])); 
 
 # see the name of all the tables in fundbook database
-show tables
+show tables;
 
 # see attributes' names and types in particular table
-show columns from [table name]
+show columns from [table name];
 
 # insert a row into table
 # note: attributes have to be in schema order
