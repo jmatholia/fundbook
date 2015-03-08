@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/base-d3da4e42a4fc11b5ff59c8875bb0ad1e64fb369338fb18f477a136ffe24a8a8a.css" media="screen,print" rel="stylesheet" />
+    <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/application-940905f8e78758182d975c8e4f71fc30f4309ceca29e110ef4583c6b02ade981.css" media="screen,print" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="mouse_events.js" type="text/javascript"></script>
+
+    <title></title>
+</head>
+
+<body>
+    <div id="topbar">
+        <div id="frozen">
+            <h1 id="main"><a href="index.html" style="text-decoration:none;"><font color=#00FFCC>Fund</font><font color=#0066FF>Book</font></a></h1>
+            <a class="top" href="login-form/23-dark-login-form/index.html" id="signin">Sign In</a> 
+            <a class="top" href="signup-form/23-dark-login-form/index.html" id="signup">Sign Up</a>
+            <a class="top" href="UserProfile.html" id="userprofile">User Profile</a> 
+
+            <!-- Search Bar -->
+            <div id="search">
+                <h3 id="searchtext" onclick="haha();">Search:</h3>
+                <!--<form action="demo_form.asp">
+                      First name: <input type="text" name="fname"><br>
+                      Last name: <input type="text" name="lname"><br> -->
+                <input id="searchInput" placeholder="Search for a Project"
+                type="text" />
+            </div><!-- </form> -->
+        </div><!-- Buttons for Topic Links -->
+        <div style="padding-top:100px">
+            <h1 id="topic_heading" class="text-center" style="color:purple">My Profile</h1><br />
+        </div>
+    </div><!-- USER PROFILE INFO-->
+
+    <hr size="6" />  
+
+    <main role="main">
+        <div class="center jGrowl" id="growl_section"></div>
+
+        <div class="container-flex px2">
+            <form accept-charset="UTF-8" action="/profile" class=
+            "form-simple form-stacked form-light" enctype="multipart/form-data"
+            id="edit_user_14355912" method="post" name="edit_user_14355912">
+
+                <div class="row">
+                    <fieldset class="col-md-6">
+                        <ul class="h5">
+                            <li class="py1"><label class="bold" for=
+                            "user_name">Name</label> <input class=
+                            "input-text full-width text" id="user_name" name=
+                            "user[name]" type="text" value=
+                            "Scarlettg" /></li>
+
+                            <li class="py1">
+                                <label class="bold" for=
+                                "user_Picture">Picture</label>
+
+                                <div class="">
+                                    <div class="user photo">
+                                        <img alt="..." src="..." />
+
+                                        <div class="caption">                                        
+
+                                            <p>My photo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="py1"><label class="bold" for=
+                            "user_biography">Biography</label> 
+                            <textarea class="input-textarea textarea"  rows="4"
+                            style="height: auto">I am a student at u of t.</textarea> 
+                            <span class="grey-dark">We suggest a short bio. If it's 300
+characters or less it'll look great on your profile.</span></li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="col-md-6">
+                        <ul class="h5">
+                            <li class="location py1"><label class="bold" for=
+                            "user_location_name">Location</label> <input class=
+                            "input-text full-width text" type="text" value=
+                            "Toronto Canada" /><span class="grey-dark">Your
+                            location is displayed on your
+                            profile.</span><br />
+                            </li>
+                            <li class="virtual url py1">
+                                <label class="bold" for=
+                                "user_virtual_url">Virtrual URL</label>
+                                <a class="btn btn-primary btn-lg" href=
+                                "www.abc.com" type="button">Send me there</a>
+                                <span class="grey-dark">This is the link to
+                                your virtual url.</span><br />
+                            </li>
+                            <li class="py1">
+                                <label class="bold" for="user_name">Email</label>
+                                <a href="abc@gmail.com">My email</a> <span class=
+                                "grey-dark">Your email is displayed on your
+                                profile.</span>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div>
+        <hr size="6" />
+        <a class="bottom" href="about.html" id="about">About Us</a> <a class=
+        "bottom" href="tutorial.html" id="tutorial">Tutorial</a> <a class=
+        "bottom" href="help.html" id="help">Help</a>
+    </div>
+</body>
+</html>
