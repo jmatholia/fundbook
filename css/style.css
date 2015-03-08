@@ -77,3 +77,8 @@ a:active {
 	float: left;
 	font-family: "Courier New Bold", Arial, Sans-Serif;
 }
+
+.py1 > label {
+	font-size: 20px;
+	color: purple;
+}
