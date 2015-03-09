@@ -37,7 +37,7 @@ h1{
   margin:0px;
 }
 
-p{
+p {
   font:13px Open Sans;
   color:#6E6E6E;
   text-shadow:#000 0px 1px 5px;
@@ -46,6 +46,7 @@ p{
 
 .form{
   width:$full;
+  text-align: center;
 }
 
 input[type="text"],input[type="email"], input[type="password"]{
@@ -60,7 +61,6 @@ input[type="text"],input[type="email"], input[type="password"]{
   color:#6E6E6E;
   text-shadow:#000 0px 1px 5px;
 }
-
 
 input[type="submit"]{
   width:100%;
