@@ -9,7 +9,7 @@
 <body>
   <div class="wrapper">
     <h1>Register For An Account</h1>
-    <p>To sign-up for a free basic account please provide us with some basic information using
+        <p>To sign-up for a free basic account please provide us with some basic information using
     the contact form below. Please use valid credentials.</p>
     <form class="form" method="post" action="http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/signup.php">
       <input name = "first" type="text" class="name" placeholder="First Name">
@@ -19,7 +19,7 @@
       
       <input name = "last" type="text" class="name" placeholder="Last Name">
       <div>
-      <p class="name-help">Please enter your last name.</p>
+        <p class="name-help">Please enter your last name.</p>
       </div>
 
       <input name = "email" type="email" class="email" placeholder="Email">
@@ -29,12 +29,12 @@
       
       <input name = "password" type="password" class="password1" placeholder="Password">
       <div>
-      <p class="password1-help">Please enter a password.</p>
+        <p class="password1-help">Please enter a password.</p>
       </div>
       
       <input type="password" class="password2" placeholder="Re-enter Password">
       <div>
-      <p class="password2-help">Please re-enter the password.</p>
+        <p class="password2-help">Please re-enter the password.</p>
       </div>
       
       <input type="submit" class="submit" value="Register">
