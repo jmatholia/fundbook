@@ -11,23 +11,23 @@
     <h1>Register For An Account</h1>
     <p>To sign-up for a free basic account please provide us with some basic information using
     the contact form below. Please use valid credentials.</p>
-    <form class="form" method="post" action="yourpage.html">
-      <input type="text" class="name" placeholder="First Name">
+    <form class="form" method="post" action="http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/signup.php">
+      <input name = "first" type="text" class="name" placeholder="First Name">
       <div>
 	    <p class="name-help">Please enter your first name.</p>
       </div>
       
-      <input type="text" class="name" placeholder="Last Name">
+      <input name = "last" type="text" class="name" placeholder="Last Name">
       <div>
       <p class="name-help">Please enter your last name.</p>
       </div>
 
-      <input type="email" class="email" placeholder="Email">
+      <input name = "email" type="email" class="email" placeholder="Email">
       <div>
 	    <p class="email-help">Please enter your current email address.</p>
       </div>
       
-      <input type="password" class="password1" placeholder="Password">
+      <input name = "password" type="password" class="password1" placeholder="Password">
       <div>
       <p class="password1-help">Please enter a password.</p>
       </div>
