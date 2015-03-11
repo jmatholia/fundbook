@@ -24,4 +24,4 @@ password = fundbook
 
 
 Public address:
-http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/
+http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/index.php
