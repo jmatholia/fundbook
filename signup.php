@@ -17,7 +17,7 @@
 <!-- SET COOKIE FOR LOGIN -->
 <?php
 setcookie("name", $name);
-//setcookie("email", $email);
+setcookie("email", $email);
 ?>
 
 <?php include("headers.php"); ?>

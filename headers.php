@@ -15,7 +15,7 @@
 				<h1 id="main"><a href="index.php" style="text-decoration:none;"><font color=#00FFCC>Fund</font><font color=#0066FF>Book</font></a></h1>
 				<?php
 					if (!isset($_COOKIE["name"])) {
-						echo '<a href="login-form/23-dark-login-form/index.html" id="signin" class="top"> Sign In </a>';
+						echo '<a href="loginmain.php" id="signin" class="top"> Sign In </a>';
 						echo '<a href="signupmain.php" id="signup" class="top"> Sign Up </a>';
 					}
 				?>
