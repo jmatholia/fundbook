@@ -43,6 +43,7 @@
 
 #topic_heading {
 	font-weight: bold;
+	color: grey;
 }
 
 /* LINK DESIGN */
@@ -81,4 +82,14 @@ a:active {
 .py1 > label {
 	font-size: 20px;
 	color: purple;
+}
+
+.py1 {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+#profilepic {	
+	max-height: 300px;
+	max-width: 300px;
 }

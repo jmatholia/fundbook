@@ -1,4 +1,4 @@
-<?php include("headers.html"); ?>
+<?php include("headers.php"); ?>
 
 		<!-- 3 Project Previews-->
 		<center>
@@ -56,4 +56,4 @@
 	}
 ?>
 
-<?php include("footers.html"); ?>
+<?php include("footers.php"); ?>

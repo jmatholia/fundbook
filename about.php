@@ -1,5 +1,5 @@
-<?php include("headers.html"); ?>
+<?php include("headers.php"); ?>
 
 <b> ABOUT </b>
 
-<?php include("footers.html"); ?>
+<?php include("footers.php"); ?>

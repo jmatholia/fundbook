@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
 <!-- INCLUDES THE LOGO BAR & SEARCH BAR & BUTTONS -->
 
 	<head>
@@ -14,9 +13,17 @@
 		<div id="topbar"> 
 			<div id="frozen">
 				<h1 id="main"><a href="index.php" style="text-decoration:none;"><font color=#00FFCC>Fund</font><font color=#0066FF>Book</font></a></h1>
-				<a href="login-form/23-dark-login-form/index.html" id="signin" class="top"> Sign In </a>
-				<a href="signupmain.php" id="signup" class="top"> Sign Up </a>
-				<a class="top" href="userprofile.php" id="userprofile">User Profile</a>
+				<?php
+					if (!isset($_COOKIE["name"])) {
+						echo '<a href="login-form/23-dark-login-form/index.html" id="signin" class="top"> Sign In </a>';
+						echo '<a href="signupmain.php" id="signup" class="top"> Sign Up </a>';
+					}
+				?>
+				<a class="top" href="userprofile.php" id="userprofile">
+					<?php 
+					echo $_COOKIE["name"];
+					?>
+				</a>
 				<!-- Search Bar -->
 				<div id="search">
 					<h3 id="searchtext" onclick="haha();"> Search: </h3>
