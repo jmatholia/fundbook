@@ -1,3 +1,17 @@
+function checkMatch() {
+    var x, y, text;
+
+    x = document.getElementById("pword").value;
+    y = document.getElementById("pword2").value;
+
+    if (x != y) {
+        text = "-- WARNING: PASSWORDS DONT MATCH --";
+    } else {
+        text = "-- PASSWORDS MATCH --";
+    }
+    document.getElementById("confirm_match").innerHTML = text;
+}
+/*
 $(".name").focus(function(){
   $(".name-help").slideDown(500);
 }).blur(function(){
@@ -21,3 +35,4 @@ $(".password2").focus(function(){
 }).blur(function(){
   $(".password2-help").slideUp(500);
 });
+*/
