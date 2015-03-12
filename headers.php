@@ -1,6 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <!-- INCLUDES THE LOGO BAR & SEARCH BAR & BUTTONS -->
 
+<?php
+	// FOR WHEN WE START USING SESSIONS INSTEAD OF COOKIES
+/*
+	if( $_SESSION['last_activity'] < time()-$_SESSION['expire_time'] ) { //have we expired?
+	    header('Location: http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com//logout.php');
+	} else{ //if we haven't expired:
+	    $_SESSION['last_activity'] = time(); //this was the moment of last activity.
+	}	
+
+	// NOTES:
+	// and add start start_session(); in login.php and signup.php
+	// and replace all $_COOKIE with $_SESSION, can do isset($_SESSION["name"]) 
+	// don't know how to unset specific session variables yet, logout.php would have to change
+
+  */
+?>
+
+
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
