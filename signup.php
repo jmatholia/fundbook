@@ -16,8 +16,15 @@
 
 <!-- SET COOKIE FOR LOGIN -->
 <?php
-setcookie("name", $name);
-setcookie("email", $email);
+	setcookie("name", $name);
+	setcookie("email", $email);
+	/*
+		// needed for starting session!
+		session_start()
+		$_SESSION['logged_in'] = true; //set you've logged in
+		$_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
+		$_SESSION['expire_time'] = 3*60*60; //expire time in seconds: three hours (you must change this)
+	*/
 ?>
 
 <?php include("headers.php"); ?>
