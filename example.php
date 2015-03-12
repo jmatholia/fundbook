@@ -1,4 +1,4 @@
-<?php include("headers.html"); ?>
+<?php include("headers.php"); ?>
 
 	<!-- Menu Horizontal -->
 	<ul class="menu">
@@ -87,4 +87,4 @@
 
 	</div><!-- END GRID -->
 
-<?php include("footers.html"); ?>
+<?php include("footers.php"); ?>

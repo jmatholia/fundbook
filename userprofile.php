@@ -1,86 +1,50 @@
-<?php include("headers.html"); ?>
+<?php include("headers.php"); ?>
+    
+        <center>
+            <h1 id="topic_heading">My Profile</h1>
+        </center>
 
-        <div style="padding-top:100px">
-            <h1 id="topic_heading" class="text-center" style="color:purple">My Profile</h1><br />
-        </div>
     </div><!-- USER PROFILE INFO-->
 
     <hr size="6" />  
 
     <main role="main">
-        <div class="center jGrowl" id="growl_section"></div>
+        <div class="">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <ul class="h5">
+                    <li class="py1"><label class="bold" for=
+                    "user_name">Name</label>
+                        <br>Scarlett
+                    </li>
+                    <li class="py1"><label class="bold" for=
+                    "user_Picture">Picture</label>          
+                        <br><img id="profilepic" alt="My Picture" src="http://www.cats.org.uk/uploads/images/pages/photo_latest14.jpg" />
+                    </li>
+                </ul>
+            </div>
 
-        <div class="container-flex px2">
-            <form accept-charset="UTF-8" action="/profile" class=
-            "form-simple form-stacked form-light" enctype="multipart/form-data"
-            id="edit_user_14355912" method="post" name="edit_user_14355912">
+            <div class="col-md-5">
+                <ul class="h5">
+                    <li class="py1"><label class="bold" for=
+                    "user_location_name">Location</label>
+                        <br>Toronto Canada
+                    </li>
+                    <li class="py1"><label class="bold" for=
+                    "user_biography">Biography</label>
+                        <br>My liking are exploring new places, I like to travel a lot as it opens horizons in my life, 
+                        playing cricket gives me innermost enjoyment and listening to the music as it redefines my soul 
+                        and refreshes me all the time. I would like to conclude my intro by saying that it was my privilege 
+                        that you have giving me an opportunity to introduce myself in front of you.
 
-                <div class="row">
-                    <fieldset class="col-md-6">
-                        <ul class="h5">
-                            <li class="py1"><label class="bold" for=
-                            "user_name">Name</label> <input class=
-                            "input-text full-width text" id="user_name" name=
-                            "user[name]" type="text" value=
-                            "Scarlettg" /></li>
-
-                            <li class="py1">
-                                <label class="bold" style="color:purple" for=
-                                "user_Picture">Picture</label>
-
-                                <div class="">
-                                    <div class="user photo">
-                                        <img alt="..." src="..." />
-
-                                        <div class="caption">                                        
-
-                                            <p>My photo.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="py1"><label class="bold" for=
-                            "user_biography">Biography</label> 
-                            <textarea class="input-textarea textarea"  rows="4"
-                            style="height: auto">I am a student at u of t.</textarea> 
-                            <span class="grey-dark">We suggest a short bio. If it's 300
-characters or less it'll look great on your profile.</span></li>
-                        </ul>
-                    </fieldset>
-
-                    <fieldset class="col-md-6">
-                        <ul class="h5">
-                            <li class="location py1"><label class="bold" for=
-                            "user_location_name">Location</label> <input class=
-                            "input-text full-width text" type="text" value=
-                            "Toronto Canada" /><span class="grey-dark">Your
-                            location is displayed on your
-                            profile.</span><br />
-                            </li>
-                            <br>
-                            <li class="virtual url py1">
-                                <label class="bold" for=
-                                "user_virtual_url">Virtrual URL</label>
-                                <br>
-                                <a class="btn btn-primary btn-lg" href=
-                                "www.abc.com" type="button">Send me there</a>
-                                <br><br>
-                                <span class="grey-dark">This is the link to
-                                your virtual url.</span><br />
-                            </li>
-                            <br>
-                            <li class="py1">
-                                <label class="bold" for="user_name">Email</label>
-                                <a href="abc@gmail.com">My email</a> <span class=
-                                "grey-dark">Your email is displayed on your
-                                profile.</span>
-                            </li>
-                        </ul>
-                    </fieldset>
-                </div>
-            </form>
+                     </li>
+                    <li class="py1"><label class="bold" for="user_name">Email</label>
+                        <br><a href="mailto:abc@gmail.com">My email</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
         </div>
     </main>
 
-<?php include("footers.html"); ?>
+<?php include("footers.php"); ?>

@@ -1,4 +1,4 @@
-<?php include("headers.html"); ?>
+<?php include("headers.php"); ?>
 
 		<!-- TOP PROJECTS INFO-->
 		<center>
@@ -43,4 +43,4 @@
 		</div>
 		</center>
 
-<?php include("footers.html"); ?>
+<?php include("footers.php"); ?>
