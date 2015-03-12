@@ -17,6 +17,8 @@
 					if (!isset($_COOKIE["name"])) {
 						echo '<a href="loginmain.php" id="signin" class="top"> Sign In </a>';
 						echo '<a href="signupmain.php" id="signup" class="top"> Sign Up </a>';
+					} else {
+						echo '<a href="logout.php" id="signin" class="top"> Sign Out </a>';	
 					}
 				?>
 				<a class="top" href="userprofile.php" id="userprofile">

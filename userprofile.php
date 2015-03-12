@@ -15,7 +15,21 @@
                 <ul class="h5">
                     <li class="py1"><label class="bold" for=
                     "user_name">Name</label>
-                        <br>Scarlett
+                        <br><?php 
+                                echo $_COOKIE["name"];
+
+                                // connect to the database
+                                $dsn = "mysql:host=localhost;dbname=fundbook";
+                                //$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+                                $db = new PDO($dsn, "root", "fundbook");
+
+                                $email = $_COOKIE['email'];
+                                $users = $db->query("SELECT * FROM users where email='$email'");
+                                foreach ($users as $row) {
+                                    $user = $row;
+                                }
+                            ?>
+
                     </li>
                     <li class="py1"><label class="bold" for=
                     "user_Picture">Picture</label>          
@@ -28,18 +42,19 @@
                 <ul class="h5">
                     <li class="py1"><label class="bold" for=
                     "user_location_name">Location</label>
-                        <br>Toronto Canada
+                        <br>Toronto Canada <!-- field doesn't exist in databse so always Toronto-->
                     </li>
                     <li class="py1"><label class="bold" for=
                     "user_biography">Biography</label>
-                        <br>My liking are exploring new places, I like to travel a lot as it opens horizons in my life, 
-                        playing cricket gives me innermost enjoyment and listening to the music as it redefines my soul 
-                        and refreshes me all the time. I would like to conclude my intro by saying that it was my privilege 
-                        that you have giving me an opportunity to introduce myself in front of you.
+                        <br> <?php
+                                echo $user["biography"];
+                              ?>
 
                      </li>
                     <li class="py1"><label class="bold" for="user_name">Email</label>
-                        <br><a href="mailto:abc@gmail.com">My email</a>
+                        <br><a href="mailto:abc@gmail.com"><?php
+                                                                echo $user["email"];
+                                                            ?></a>
                     </li>
                 </ul>
             </div>
