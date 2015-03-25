@@ -24,13 +24,30 @@
 	<div class="grid">
 		
 	<!-- ===================================== END HEADER ===================================== -->
-		 
+	<?php
+	 // ACTUAL PROJECT 
+		// get relevant project
+		$pid = $_GET["pid"];
+		$dsn = "mysql:host=localhost;dbname=fundbook";
+		//$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+		$db = new PDO($dsn, "root", "fundbook");
+		$projects = $db->query("SELECT * FROM projects WHERE pid=$pid");
+		foreach ($projects as $project) {
+			$author = $project["user"];
+			$goal = $project["goal"];
+			$category = $project["topic"];
+			$title = $project["name"];
+			$description = $project["description"];
+			// $location = need query
+		}
+	?>
+	
 	<div class="col_12">
 		<div class="col_9">
-		  <h3>Car Mechanic Simulator 2015</h3>
+		  <h3><?php echo $title; ?> </h3>
 		  <p align="left"><strong><img class="align-left" src="http://placehold.it/180x150/4D99E0/ffffff.png&amp;text=180x150" width="400" height="150">
-		New cars, new tools, new options, more parts and much more fun in the next version of Car Mechanic Simulator! Take your wrench!  </strong></p>
-		  <p align="left"> Car Mechanic Simulator 2015 is a direct sequel to the succesful Car Mechanic Simulator 2014. After the release of the previous edition we got a lot of feedback from players and we felt that we haven't reached the full potential of it yet. Check out the improved Car Mechanic Simulator with new features, cars and parts. There is a lot of new stuff to present.</p>
+			<?php echo $description; ?>  </strong></p>
+		  <p align="left"> NOT IN DATABASE DUMMY: Car Mechanic Simulator 2015 is a direct sequel to the succesful Car Mechanic Simulator 2014. After the release of the previous edition we got a lot of feedback from players and we felt that we haven't reached the full potential of it yet. Check out the improved Car Mechanic Simulator with new features, cars and parts. There is a lot of new stuff to present.</p>
 		</div>
 	<div class="col_3">
 		<h5>Fund Info</h5>
@@ -52,23 +69,21 @@
 		
 		<div class="col_3">
 		  <h4>Project Video</h4>
-		  <p align="left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-		  	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+		  <p align="left">NOT IN DATABASE</p>
 		</div> 
 		
 		<div class="col_3">
 		<h4 align="left">Column</h4>
-		<p align="left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-		  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+		<p align="left">NOT IN DATABSE</p>
 		</div>
 		
 		
 		<div class="col_3">
 		  <h4>Author Information</h4>
-		  <p>We are a small two-men team based in Sofia, Bulgaria. One Programmer (Georgi Rakidov) + One Artist (Lyubomir Iliev)</p>
+		  <p> <?php echo $author; ?> </p>
 		</div>
 	</div>
-	
+
 	<div class="disqus">
       <div id="disqus_thread"></div>
     	<script type="text/javascript">
