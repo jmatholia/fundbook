@@ -12,3 +12,14 @@ show columns from [table name];
 # insert a row into table
 # note: attributes have to be in schema order
 insert into [table name] values ('attribute1', 'attribute2', ... );
+
+
+insert into projects (pid, name, goal, topic, location, user, description) values (0, 'Kill Voldemort', 1000.00, 'comics', 0, 'harry.potter@hogwarts.edu', 'Kill Voldemort and all the horcruxes because he is evil.');
+
+insert into projects (pid, name, goal, topic, location, user, description) values (3, 'ART PROJECT THE SECOND', 3400.00, 'art', 1, 'pablo@mail.com', 'This is the second project. Its going to change the world, fund it!!!');
+
+insert into projects (pid, name, goal, topic, location, user, description) values (4, 'ART PROJECT THE THIRD', 2600.00, 'art', 1, 'pablo@mail.com', 'This is the third project. Its going to be even better then the second one, fund it too!!!');
+
+insert into projects (pid, name, goal, topic, location, user, description) values (5, 'Harrys Art Project', 100.00, 'art', 0, 'pablo@mail.com', 'Dont ask I need to do this to get into the Auror academy.');
+
+insert into projects (pid, name, goal, topic, location, user, description) values (8, 'THE FIRST FASHION PROJECT', 12000.00, 'fashion', 0, 'fashionistas@mail.com', 'Give clothes to everyone!!');
