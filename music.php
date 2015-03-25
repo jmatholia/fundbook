@@ -21,7 +21,7 @@
 						      <img src="..." alt="...">
 						      <div class="caption">
 						        <h3>'. $project["name"] .'</h3>
-						        <p>...</p>
+						        <p>' . $project["description"] . '</p>
 						        <p><a href="example.php?pid='. $project["pid"] . 
 						        			'" class="btn btn-primary" role="button">View Page</a> 
 						        	<a href="#" class="btn btn-default" role="button">Add to Interests</a>
