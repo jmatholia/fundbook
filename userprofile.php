@@ -1,7 +1,7 @@
 <?php include("headers.php"); ?>
     
         <center>
-            <h1 id="topic_heading">My Profile</h1>
+            <h1 id="topic_heading">My Profile</h1><a href="userprofile_edit.php" style="font-size: 20px">edit</a></h1>
         </center>
 
     </div><!-- USER PROFILE INFO-->

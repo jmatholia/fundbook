@@ -3,7 +3,7 @@
 		# process a POST request
 		$name = $_POST["first"] . " " . $_POST["last"];
 		$email = $_POST["email"];
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 	}
 
 	// database connection
@@ -11,7 +11,7 @@
 	//$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 	$db = new PDO($dsn, "root", "fundbook");
 	// SHOULD CHECK THAT USER DOESN'T EXIST IN DB ALREADY !!
-	// $db->query("INSERT INTO users (email, password, name) VALUES ('$email', '$password', '$name')");
+	$db->query("INSERT INTO users (email, password, name) VALUES ('$email', '$password', '$name')");
 ?>
 
 <!-- SET COOKIE FOR LOGIN -->

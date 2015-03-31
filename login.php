@@ -2,7 +2,7 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		# process a POST request
 		$email = $_POST["email"];
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 	}
 
 	// database connection

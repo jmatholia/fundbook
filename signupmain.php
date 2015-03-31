@@ -16,24 +16,24 @@
         <p>To sign-up for a free basic account please provide us with some basic information using
     the contact form below. Please use valid credentials.</p>
     <form class="form" method="post" action="http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/signup.php">
-      <input name = "first" type="text" class="name" placeholder="First Name">
+      <input name = "first" type="text" class="name" placeholder="First Name" required>
       <div>
 	    <p class="name-help">Please enter your first name.</p>
       </div>
       
-      <input name = "last" type="text" class="name" placeholder="Last Name">
+      <input name = "last" type="text" class="name" placeholder="Last Name" required>
       <div>
         <p class="name-help">Please enter your last name.</p>
       </div>
 
-      <input name = "email" type="email" class="email" placeholder="Email">
+      <input name = "email" type="email" class="email" placeholder="Email" required>
       <div>
 	    <p class="email-help">Please enter your current email address.</p>
       </div>
       
-      <input name = "password" id="pword" type="password" class="password1" placeholder="Password">
+      <input name = "password" id="pword" type="password" class="password1" placeholder="Password" required>
       
-      <input type="password" id="pword2" class="password2" placeholder="Re-enter Password" oninput="checkMatch()">
+      <input type="password" id="pword2" class="password2" placeholder="Re-enter Password" oninput="checkMatch()" required>
 
       <div id="confirm_match" class="alert alert-warning" role="alert"></div>
 
