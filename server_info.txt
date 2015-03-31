@@ -1,11 +1,3 @@
-amazon aws website Gina's Login info:
-e-mail: gina.xiee@gmail.com
-pword: fundbook
-
-
-
-
-
 - to ssh into our aws server type this into cygwin/putty:
 ** NOTE: you will have to be in the directory where the key is located! **
 
