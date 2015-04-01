@@ -1,19 +1,25 @@
-<?php  
-function change($email, $password,$name, $biography) {
- 	$dsn = "mysql:host=localhost;dbname=fundbook";
-    $db = new PDO($dsn, 'root', 'fundbook');
-	$rs = $db->exec("update users set password='md5($password)',name='$name',biography='$biography' where email='$email'");
-	return $rs;
-}
+<?php
+	session_start();
 
-if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['biography'])) {
-	if(change($_POST['password'],$_POST['name'],$_POST['biography']))
-		echo "<script>alert('success');history.back();</script>";
-	else{
-		echo "<script>alert('fail!');history.back()</script>";
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		# process a POST request
+		$name = $_POST["name"];
+		$picture = $_POST["picture"];
+		$location = $_POST["location"];
+		$email = $_POST["email"];
+		$biography = $_POST["biography"];
 	}
-}else{
-	echo "<script>alert('fail!');history.back()</script>";
-}
 
+	$oldemail = $_SESSION["email"];
+	
+	// database connection
+	$dsn = "mysql:host=localhost;dbname=fundbook";
+	$db = new PDO($dsn, "root", "fundbook");
+
+	$db->query("UPDATE users SET name='$name', picture='$picture', location='$location', email='$email', biography='$biography' WHERE email='$oldemail'");
+
+	setcookie("name", $name);
+	setcookie("email", $email);
+
+	header("Location: http://ec2-52-11-64-163.us-west-2.compute.amazonaws.com/userprofile.php");
 ?>
