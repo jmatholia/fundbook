@@ -31,13 +31,15 @@
 		$dsn = "mysql:host=localhost;dbname=fundbook";
 		//$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 		$db = new PDO($dsn, "root", "fundbook");
-		$projects = $db->query("SELECT * FROM projects WHERE pid=$pid");
+		$projects = $db->query("SELECT * FROM projects WHERE pid='$pid'");
 		foreach ($projects as $project) {
 			$author = $project["user"];
 			$goal = $project["goal"];
 			$category = $project["topic"];
 			$title = $project["name"];
 			$description = $project["description"];
+			$numBackers = $project["numBackers"];
+			$raisedAmt = $project["raisedAmt"];
 			// $location = need query
 		}
 	?>
@@ -50,10 +52,10 @@
 		  <p align="left"> NOT IN DATABASE DUMMY: Car Mechanic Simulator 2015 is a direct sequel to the succesful Car Mechanic Simulator 2014. After the release of the previous edition we got a lot of feedback from players and we felt that we haven't reached the full potential of it yet. Check out the improved Car Mechanic Simulator with new features, cars and parts. There is a lot of new stuff to present.</p>
 		</div>
 	<div class="col_3">
-		<h5>Fund Info</h5>
+		<h4>Fund Info</h4>
 		<ul class="icons">
-		<li><i class="fa fa-li fa-check"></i> 2,012 Backers</li>
-		<li><i class="fa fa-li fa-check"></i> $48,074 pledged of $14,000 goal </li>
+		<li><i class="fa fa-li fa-check"></i> <?php echo $numBackers; ?>  Backers</li>
+		<li><i class="fa fa-li fa-check"></i> $<?php echo $raisedAmt; ?>  pledged of $<?php echo $goal; ?>  goal </li>
 		<li><i class="fa fa-li fa-check"></i> 13 days to go</li>
 		</ul>
 		<h6>Author Information</h6>
@@ -61,7 +63,7 @@
 	    PlayWay</p>
 	    <p>4 created  |  1 backed</p>
 
-		<button type="button" class="btn btn-default">Back This Project</button>
+		<a type="button" href=<?php echo "backProject.php?pid=". $pid; ?> class="btn btn-default">Back This Project</a>
 	</div>
 		
 		<hr>
