@@ -2,7 +2,8 @@
 
 		<!-- 3 Project Previews-->
 		<center>
-		<h1> Top Six Projects on Fundbook </h1>
+		<h1 id="topic_heading"> Top Six Projects in <font color=#00FFCC>Fund</font><font color=#0066FF>Book</font> </h1>
+		
 		<hr color="#6699FF" size="6"> 
 		<div class="row">
 		  <?php  // GET ALL THE PROJECTS IN THE DATABASE, CHANGE THIS LATER

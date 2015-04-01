@@ -20,7 +20,7 @@
 				foreach ($projects as $project) {
 					echo  '<div class="col-sm-6 col-md-4">
 						    <div class="thumbnail">
-						      <img src="..." alt="...">
+						      <img src="'. $project["picture"] .'" alt="...">
 						      <div class="caption">
 						        <h3>' . $project["name"] . '</h3>
 						        <p>' . $project["description"] . '</p>
