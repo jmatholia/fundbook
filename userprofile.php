@@ -1,7 +1,7 @@
 <?php include("headers.php"); ?>
     
         <center>
-            <h1 id="topic_heading">My Profile</h1><a href="userprofile_edit.php" style="font-size: 20px">edit</a></h1>
+            <h1 id="topic_heading"><?php echo $_COOKIE["name"]; ?></h1><a href="userprofile_edit.php" type="button" class="btn btn-default">Edit Profile</a>
         </center>
 
     </div><!-- USER PROFILE INFO-->
@@ -10,14 +10,10 @@
 
     <main role="main">
         <div class="">
-            <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
             <div class="col-md-4">
                 <ul class="h5">
-                    <li class="py1"><label class="bold" for=
-                    "user_name">Name</label>
                         <br><?php 
-                                echo $_COOKIE["name"];
-
                                 // connect to the database
                                 $dsn = "mysql:host=localhost;dbname=fundbook";
                                 //$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -32,8 +28,8 @@
 
                     </li>
                     <li class="py1"><label class="bold" for=
-                    "user_Picture">Picture</label>          
-                        <br><img id="profilepic" alt="My Picture" src="http://www.cats.org.uk/uploads/images/pages/photo_latest14.jpg" />
+                    "user_Picture"></label>          
+                        <br><img id="profilepic" alt="Upload A Picture" src=<?php echo $user["picture"]; ?> />
                     </li>
                 </ul>
             </div>
@@ -42,7 +38,7 @@
                 <ul class="h5">
                     <li class="py1"><label class="bold" for=
                     "user_location_name">Location</label>
-                        <br>Toronto Canada <!-- field doesn't exist in databse so always Toronto-->
+                        <br><?php echo $user["location"]; ?>
                     </li>
                     <li class="py1"><label class="bold" for=
                     "user_biography">Biography</label>
@@ -61,5 +57,6 @@
             <div class="col-md-1"></div>
         </div>
     </main>
+
 
 <?php include("footers.php"); ?>
