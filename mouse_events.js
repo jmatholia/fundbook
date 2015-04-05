@@ -41,21 +41,3 @@ $(document).ready( function() {
     });
 
 });
-
-/* 
-        $.post(ajaxurl, data, function(data) {}, 'json')
-            .success (function (data) {
-                // Response div goes here.
-                alert("action performed successfully");
-                console.log("response ", data);
-                var jsonData = $.parseJSON(data);
-                document.getElementById('backers').innerHTML = '<i class="fa fa-li fa-check"></i> ' + 
-                                                                jsonData['numBackers'] + " Backers";
-                document.getElementById('raised').innerHTML = '<i class="fa fa-li fa-check"></i> ' + 
-                        jsonData['raisedAmt'] + " pledged of " + jsonData['goal'] +" goal ";
-                    })
-            .error (function (data) {
-                
-                    })
-            
-            */
