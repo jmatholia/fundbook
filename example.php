@@ -63,7 +63,7 @@
 	    PlayWay</p>
 	    <p>4 created  |  1 backed</p>
 
-		<a type="button" href=<?php echo "backProject.php?pid=". $pid; ?> class="btn btn-default">Back This Project</a>
+		<a type="button" href=<?php echo "back_project.php?pid=". $pid; ?> class="btn btn-default">Back This Project</a>
 	</div>
 		
 		<hr>
