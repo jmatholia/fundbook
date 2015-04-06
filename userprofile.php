@@ -24,10 +24,10 @@
                                 foreach ($users as $row) {
                                     $user = $row;
                                 }
-                                $interests = $db->query("SELECT * FROM topicInterests WHERE person='$email'");
+                                $interests = $db->query("SELECT topic FROM topicInterests WHERE person='$email'");
                                 $intStr = 'WHAT';
                                 foreach ($insterests as $interest) {
-                                    $intStr = $intStr . ', ' .$interest["topic"];
+                                    $intStr = $intStr . ', ' . $interest["topic"];
                                 }
                             ?>
 

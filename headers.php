@@ -51,7 +51,10 @@
 					<!--<form action="demo_form.asp">
 					  First name: <input type="text" name="fname"><br>
 					  Last name: <input type="text" name="lname"><br> -->
-					<input type="text" placeholder="Search for a Project" id="searchInput"> </input>
+					  <form action="result.php" method="get">
+					<input type="text" placeholder="Search for a Project" name="search" id="searchInput"> </input>
+					<input type="submit" value="GO" />
+					</form>
 				</div>
 				<!-- </form> -->
 			</div>
