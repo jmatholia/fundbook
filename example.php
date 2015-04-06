@@ -45,7 +45,13 @@
 			$rating = $project["rating"];
 		}
 	?>
-	
+
+	<?php
+	if (isset($_COOKIE["email"]) and ($_COOKIE["email"] == $author)) {
+		echo "<h4><a href='edit_project.php?pid=" . $pid . "'> Edit</a> /<a href='delete_project.php?pid=" . $pid . "'> Delete </a></h4>";
+	}
+	?>	
+
 	<div class="col_12">
 		<div class="col_9">
 		  <h3><?php echo $title; ?> </h3>
