@@ -24,8 +24,11 @@
                                 foreach ($users as $row) {
                                     $user = $row;
                                 }
-                                // $interests = $db->query("SELECT * FROM topicInterests where email='$email'");
-
+                                $interests = $db->query("SELECT * FROM topicInterests WHERE person='$email'");
+                                $intStr = 'WHAT';
+                                foreach ($insterests as $interest) {
+                                    $intStr = $intStr . ', ' .$interest["topic"];
+                                }
                             ?>
 
                     </li>
@@ -57,7 +60,7 @@
                     <li class="py1"><label class="bold" for=
                     "user_biography">Interests</label>
                         <br> <?php
-                                echo "Doesn't work yet";
+                                echo $intStr;
                               ?>
 
                      </li>
