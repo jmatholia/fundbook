@@ -35,11 +35,11 @@
 				        <br />
 				        <p class="help"> Please select the topic of the project. </p>
 				        <select name="tags">
-				        	<option value="art" selected> Art </option>
-						    <option value="comics"> Comics </option>
-						    <option value="fashion"> Fashion </option>
-						    <option value="technology"> Technology </option>
-						    <option value="music"> Music </option>
+				        	<option value="Art" selected> Art </option>
+						    <option value="Comics"> Comics </option>
+						    <option value="Fashion"> Fashion </option>
+						    <option value="Technology"> Technology </option>
+						    <option value="Music"> Music </option>
 						</select>
 				        <br />
 				        <br />

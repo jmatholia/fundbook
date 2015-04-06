@@ -14,12 +14,12 @@
 			$dsn = "mysql:host=localhost;dbname=fundbook";
 			$db = new PDO($dsn, "root", "fundbook");
 
-			$projects=$db->query("SELECT * FROM projects where topic='technology'");
+			$projects=$db->query("SELECT * FROM projects where topic='Technology'");
 			if ($projects->rowCount() > 0) {
 				foreach ($projects as $project) {
 					echo  '<div class="col-sm-6 col-md-4">
 						    <div class="thumbnail">
-						      <img src="'. $project["picture"] .'" alt="...">
+						      <img src= ' . $project["picture"] . ' alt="..." width="450" height="300">
 						      <div class="caption">
 						        <h3>'. $project["name"] .'</h3>
 						        <p>' . $project["description"] . '</p>

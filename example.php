@@ -40,16 +40,24 @@
 			$description = $project["description"];
 			$numBackers = $project["numBackers"];
 			$raisedAmt = $project["raisedAmt"];
-			// $location = need query
+			$location =  $project["location"];
+			$picture = $project["picture"];
+			$rating = $project["rating"];
 		}
 	?>
-	
+
+	<?php
+	if (isset($_COOKIE["email"]) and ($_COOKIE["email"] == $author)) {
+		echo "<h4><a href='edit_project.php?pid=" . $pid . "'> Edit</a> /<a href='delete_project.php?pid=" . $pid . "'> Delete </a></h4>";
+	}
+	?>	
+
 	<div class="col_12">
 		<div class="col_9">
 		  <h3><?php echo $title; ?> </h3>
-		  <p align="left"><strong><img class="align-left" src="http://placehold.it/180x150/4D99E0/ffffff.png&amp;text=180x150" width="400" height="150">
-			<?php echo $description; ?>  </strong></p>
-		  <p align="left"> NOT IN DATABASE DUMMY: Car Mechanic Simulator 2015 is a direct sequel to the succesful Car Mechanic Simulator 2014. After the release of the previous edition we got a lot of feedback from players and we felt that we haven't reached the full potential of it yet. Check out the improved Car Mechanic Simulator with new features, cars and parts. There is a lot of new stuff to present.</p>
+		  <p align="left"><strong><img class="align-left" src="<?php echo $picture; ?>" width="400" height="150">
+			About This Project: </strong></p>
+		  <p align="left"><?php echo $description; ?> </p>
 		</div>
 	<div class="col_3">
 		<h4>Fund Info</h4>
@@ -57,26 +65,31 @@
 		<li><i class="fa fa-li fa-check"></i> <?php echo $numBackers; ?>  Backers</li>
 		<li><i class="fa fa-li fa-check"></i> $<?php echo $raisedAmt; ?>  pledged of $<?php echo $goal; ?>  goal </li>
 		<li><i class="fa fa-li fa-check"></i> 13 days to go</li>
+		<li><i class="fa fa-li fa-check"></i> Current Rating: <?php echo $rating; ?></li>
 		</ul>
 		<h6>Author Information</h6>
 	    <p>
-	    PlayWay</p>
-	    <p>4 created  |  1 backed</p>
+	    <?php echo $author; ?></p>
 
 		<a type="button" href=<?php echo "back_project.php?pid=". $pid; ?> class="btn btn-default">Back This Project</a>
+		<br />
+		<br><?php	echo "<a href='upvote.php?pid=" . $pid . 
+				"' button type='button' class='btn btn-success'>Upvote</a> ". 
+				" <a href='downvote.php?pid=" . $pid . "' button type='button' " . 
+				"class='btn btn-danger'>Downvote</a>"; ?></br>
 	</div>
 		
 		<hr>
 		<hr/>
 		
 		<div class="col_3">
-		  <h4>Project Video</h4>
-		  <p align="left">NOT IN DATABASE</p>
+		  <h4>Project Location</h4>
+		  <p align="left"><?php echo $location; ?></p>
 		</div> 
 		
 		<div class="col_3">
-		<h4 align="left">Column</h4>
-		<p align="left">NOT IN DATABSE</p>
+		<h4 align="left">Project Category</h4>
+		<p align="left"><?php echo $category; ?></p>
 		</div>
 		
 		
