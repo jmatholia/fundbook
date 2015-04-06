@@ -24,7 +24,6 @@
 	 // ACTUAL PROJECT 
 		// get relevant project
 		$pid = $_GET["pid"];
-		setcookie("most_recent_project", $pid);
 		$dsn = "mysql:host=localhost;dbname=fundbook";
 		//$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 		$db = new PDO($dsn, "root", "fundbook");
@@ -49,7 +48,7 @@
 		</ul>
 		<h4 id="warning"></h4>
 		<input id="fund" name = "fund" type="fund" class="fund" placeholder="0.00">
-		<a class="btn btn-default" val="fund">Fund!</a>
+		<a class="btn btn-default" val="fund" pid= <?php echo '"'. $pid .'"'; ?> >Fund!</a>
 		</center>
 
 <?php include("footers.php"); ?>
