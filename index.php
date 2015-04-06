@@ -21,7 +21,7 @@
 						        <p>' . $project["description"] . '</p>
 						        <p><a href="example.php?pid='. $project["pid"] . 
 						        			'" class="btn btn-primary" role="button">View Page</a> 
-						        	<a href="" class="btn btn-default" role="button" val="like" pid="'. $project["pid"] . '">Add To Interests</a>
+						        	<button href="" class="btn btn-default" role="button" val="like" pid="'. $project["pid"] . '">Add To Interests</button>
 						        </p>
 						      </div>
 						    </div>
