@@ -96,5 +96,14 @@ a:active {
 
 p.help {
     font-size: 16px;
-    
+
+}
+
+.crop {
+    width: 200px;
+    height: 100px;
+    background-position: center;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
 }
