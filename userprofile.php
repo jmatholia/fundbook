@@ -24,6 +24,8 @@
                                 foreach ($users as $row) {
                                     $user = $row;
                                 }
+                                // $interests = $db->query("SELECT * FROM topicInterests where email='$email'");
+
                             ?>
 
                     </li>
@@ -52,6 +54,13 @@
                                                                 echo $user["email"];
                                                             ?></a>
                     </li>
+                    <li class="py1"><label class="bold" for=
+                    "user_biography">Interests</label>
+                        <br> <?php
+                                echo "Doesn't work yet";
+                              ?>
+
+                     </li>
                 </ul>
             </div>
             <div class="col-md-1"></div>

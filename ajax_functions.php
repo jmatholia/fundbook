@@ -2,20 +2,20 @@
 if (isset($_POST['action'])) {
     switch ($_POST['action']) {
         case 'fund':
-            fund($_POST['value']);
+            fund($_POST['value'], $_POST['pid']);
             break;
         case 'like':
-            like();
+            like($_POST['pid']);
             break;
     }
 }
 
-function fund($value) {
-    if (isset($_COOKIE["most_recent_project"])) {
+function fund($value, $pid) {
+    /*if (isset($_COOKIE["most_recent_project"])) {
         $pid = $_COOKIE["most_recent_project"];
     } else {
         echo "Refresh, try again";
-    }
+    } */
 
     // validate value!!
     if (!is_numeric($value) or $value <= 0) {
@@ -49,12 +49,38 @@ function fund($value) {
     $data = array('action' => 'fund', 'numBackers' => $numBackers, 'raisedAmt' => $raisedAmt, 'goal' => $goal);
     echo json_encode($data);
     // add to interest
+    // like($pid);
 
     exit;
 }
 
-function like() {
-    echo "The insert function is called.";
+function like($pid) {
+    // database connection
+    $dsn = "mysql:host=localhost;dbname=fundbook";
+    //$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+    $db = new PDO($dsn, "root", "fundbook");
+    $projects = $db->query("SELECT * FROM projects WHERE pid='$pid'");
+    foreach ($projects as $project) {
+        $author = $project["user"];
+        $goal = $project["goal"];
+        $category = $project["topic"];
+        $title = $project["name"];
+        $numBackers = $project["numBackers"];
+        $raisedAmt = $project["raisedAmt"];
+    }
+    echo $category;
+    /* if (isset($_COOKIE["email"]) {
+        $email = $_COOKIE["email"];
+        $interested = $db->query("SELECT * FROM topicInterests WHERE email='$email' and topic='$category'");
+        // then add to interest
+        //foreach ($interest as $interested) {
+        //    exit;
+        //}
+
+        // $interested = $db->query("INSERT INTO topicInterests VALUES ('$email', '$category')");
+    } */
     exit;
 }
+
 ?>
+

@@ -5,13 +5,13 @@ function haha () {
 
 
 $(document).ready( function() {
-    $('[val]').click( function() {
+    $('[val]').click( function(e) {
         var clickBtnValue = $(this).attr('val');
         var ajaxurl = 'ajax_functions.php';
         if (clickBtnValue === "fund") {
-            data = {'action': clickBtnValue, 'value': document.getElementById('fund').value};
-        } else {
-            data = {'action': clickBtnValue};
+            data = {'action': clickBtnValue, 'value': document.getElementById('fund').value, 'pid': $(this).attr('pid')};
+        } else if (clickBtnValue === "like") {
+            data = {'action': clickBtnValue, 'pid': $(this).attr('pid')};
         }
 
         $.post(ajaxurl, data, function(data) {})
@@ -26,17 +26,16 @@ $(document).ready( function() {
                     document.getElementById('raised').innerHTML = '<i class="fa fa-li fa-check"></i> $' + 
                             jsonData['raisedAmt'] + " pledged of " + jsonData['goal'] +" goal ";
                     document.getElementById('warning').innerHTML = 'Successful Fund!';
-                }
+                } 
         	})
-            .error(function (data) {
+            .error (function (data) {
                 var error = data['responseText'];
                 console.log('error: ', error);
                 if (error === 'Bad value') {
                     document.getElementById('warning').innerHTML = 'Please enter a valid numeric value.';
                 } else if (error === 'Too high') {
                     document.getElementById('warning').innerHTML = 'Whoa! Try a smaller amount!';
-                }
-                
+                }   
             })
     });
 

@@ -46,6 +46,10 @@
 	color: grey;
 }
 
+#userprofile {
+	width:auto;
+}
+
 /* LINK DESIGN */
 a:link {
     text-decoration: none;
