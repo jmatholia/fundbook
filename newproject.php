@@ -1,33 +1,28 @@
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/index.css"> </style>
-</head>
+<?php 
 
+	include("headers.php");
 
-<body>
-	<?php 
 	if (isset($_COOKIE["name"])) {
-		print '<a href="logout.php" id="signin"> Sign Out </a>';
-		print '<br />';
 		$userName = $_COOKIE["name"];
 		$userEmail = $_COOKIE["email"];
-		print 'Hi: ' . $userName;
 
-		print '	<form class="form" method="POST" action="sysnewproject.php">
+		echo	'<center>
+				<h1> Create a New Project: </h1> 
+				<form class="form" method="POST" action="sysnewproject.php">
 					<div>
 						<br />
-						<p class="name-help"> Please enter the title of the project. </p>
-				        <input name="name" type="text" size="35" placeholder="Title" required>
-				        <p class="description-help"> Please enter the project description. </p>
-				        <input name="description" type="text" size="35" placeholder="Description" required>
-				        <p class="fund-help"> Please enter the funds needed for the project. </p>
-				        <input name="fund" type="text" size="35" placeholder="fund" required>
-				        <p class="location-help"> Please enter the location of the project. </p>
-				        <input name="location" type="text" size="35" placeholder="location" required>
-				        <p class="picture-help"> Please enter the picture url of the project. </p>
-				        <input name="picture" type="text" size="35" placeholder="picture" required>
+						<p class="help"> Please enter the title of the project. </p>
+				        <input name="name" type="text" size="35" placeholder="Enter A Title" required>
+				        <p class="help"> Please enter the project description. </p>
+				        <input name="description" type="text" size="35" placeholder="Enter A Description" required>
+				        <p class="help"> Please enter the funds needed for the project. </p>
+				        <input name="fund" type="text" size="35" placeholder="How much $" required>
+				        <p class="help"> Please enter the location of the project. </p>
+				        <input name="location" type="text" size="35" placeholder="Enter A Location" required>
+				        <p class="help"> Please enter the picture url of the project. </p>
+				        <input name="picture" type="text" size="35" placeholder="Picture URL" required>
 				        <br />
-				        <p class="period-help"> Please select the duration of the project. </p>
+				        <p class="help"> Please select the duration of the project. </p>
 				        <select name="period">
 				        	<option value="7" selected> 1 week </option>
 						    <option value="14"> 2 weeks </option>
@@ -38,7 +33,7 @@
 						    <option value="365"> 1 year </option>
 						</select>
 				        <br />
-				        <p class="tags-help"> Please select the topic of the project. </p>
+				        <p class="help"> Please select the topic of the project. </p>
 				        <select name="tags">
 				        	<option value="art" selected> Art </option>
 						    <option value="comics"> Comics </option>
@@ -53,11 +48,13 @@
 					</div>
 				</form>
 				<br />
-				<a class="ilink" href="index.php"> Go back to homepage </a>';	
+				</center>';	
 		}
+	else {
+		echo '<h1> Please sign in to create a project. </h1>';
+	}
+
+	include("footers.php");
+?>
 
 
-	?>
-
-
-</body>

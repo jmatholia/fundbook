@@ -24,7 +24,7 @@
 }
 
 #frozen {
-	height: 100px;
+	height: 120px;
 	background-color: black;
 	opacity: 0.8;
 }
@@ -92,4 +92,9 @@ a:active {
 #profilepic {	
 	max-height: 300px;
 	max-width: 300px;
+}
+
+p.help {
+    font-size: 16px;
+    
 }
