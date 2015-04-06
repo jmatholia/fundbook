@@ -5,7 +5,7 @@ if (isset($_POST['action'])) {
             fund($_POST['value'], $_POST['pid']);
             break;
         case 'like':
-            like($_POST['pid']);
+            like($_POST['pid'], 'explicit');
             break;
     }
 }
@@ -49,12 +49,12 @@ function fund($value, $pid) {
     $data = array('action' => 'fund', 'numBackers' => $numBackers, 'raisedAmt' => $raisedAmt, 'goal' => $goal);
     echo json_encode($data);
     // add to interest
-    // like($pid);
+    like($pid, 'implicit');
 
     exit;
 }
 
-function like($pid) {
+function like($pid, $how) {
     // database connection
     $dsn = "mysql:host=localhost;dbname=fundbook";
     //$options = array(PDO::"MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -68,17 +68,23 @@ function like($pid) {
         $numBackers = $project["numBackers"];
         $raisedAmt = $project["raisedAmt"];
     }
-    echo $category;
-    /* if (isset($_COOKIE["email"]) {
+    if (isset($_COOKIE["email"])) {
         $email = $_COOKIE["email"];
-        $interested = $db->query("SELECT * FROM topicInterests WHERE email='$email' and topic='$category'");
+        $interested = $db->query("SELECT * FROM topicInterests WHERE person='$email' and topic='$category'");
         // then add to interest
-        //foreach ($interest as $interested) {
-        //    exit;
-        //}
-
-        // $interested = $db->query("INSERT INTO topicInterests VALUES ('$email', '$category')");
-    } */
+        foreach ($interested as $interest) {
+            if ($how == 'explicit') {
+                $data = array('action'=> 'like',  "msg"=> "added already");
+                echo json_encode($data);
+                exit;
+            }
+        }
+        $db->query("INSERT INTO topicInterests VALUES ('$email', '$category')");
+        if ($how == 'explicit') {
+            $data = array('action'=> 'like',  'msg'=> 'added');
+            echo json_encode($data);
+        }
+    }
     exit;
 }
 
