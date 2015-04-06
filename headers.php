@@ -22,6 +22,7 @@
 		<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/style.css"> </style>
 		<link rel="stylesheet" href="css/bootstrap.min.css"> </style>
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script type="text/javascript" src="mouse_events.js"></script>
 	</head>
@@ -36,6 +37,7 @@
 						echo '<a href="signupmain.php" id="signup" class="top"> Sign Up </a>';
 					} else {
 						echo '<a href="logout.php" id="signin" class="top"> Sign Out </a>';	
+						echo '<a href="newproject.php" id="newproject" class="top"> Create Project </a>';
 					}
 				?>
 				<a class="top" href="userprofile.php" id="userprofile">
